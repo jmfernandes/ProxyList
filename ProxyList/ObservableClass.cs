@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace ProxyList
 {
@@ -9,7 +8,7 @@ namespace ProxyList
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected internal void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+        protected internal void RaisePropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             OnPropertyChanged(propertyName);
@@ -20,7 +19,7 @@ namespace ProxyList
 
         }
 
-        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        protected bool SetProperty<T>(ref T storage, T value, string propertyName = null)
         {
             if (Equals(storage, value))
             {
