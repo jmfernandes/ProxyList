@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace ProxyList
 {
+    /// <summary>
+    /// Binding proxy list. 
+    /// </summary>
     public class BindingProxyList<T> : BindingList<T>, IBindingList where T : IObservableClass
     {
         #region Private Fields
