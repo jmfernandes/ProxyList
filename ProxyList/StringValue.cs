@@ -42,6 +42,7 @@ namespace ProxyList
         public string Year { get { return y; } set { SetProperty(ref y, value); } }
         #endregion
 
+
         #region Constructor
         /// <summary>
         /// Basic constructor.
